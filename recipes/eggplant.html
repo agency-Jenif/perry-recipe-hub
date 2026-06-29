@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>蒜蓉烤茄子 · 空气炸锅食谱</title>
-<meta name="description" content="空气炸锅做蒜蓉茄子，先烤软再铺蒜蓉酱，最后回烤更入味。软糯不油腻，蒜香、酱香、微辣层次丰富。新手友善，2人份。">
+<meta name="description" content="空气炸锅版本蒜蓉烤茄子，外皮微焦，里面软嫩，适合新手。蒜香浓郁，30分钟内完成。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -24,28 +24,22 @@
   }
   .wrap { max-width: 640px; margin: 0 auto; padding: 0 18px 64px; }
 
+  /* Hero */
   .hero {
     margin: 18px 0 24px;
     background: linear-gradient(165deg, #8a5a3c, #7A4B32);
     border-radius: 28px;
-    padding: 38px 28px 30px;
+    padding: 40px 28px 34px;
     color: #fff;
     text-align: center;
   }
-  .hero h1 { font-size: 34px; letter-spacing: 4px; font-weight: 700; }
-  .hero .sub { margin-top: 12px; font-size: 15px; opacity: .92; }
+  .hero svg { width: 92px; height: 92px; margin-bottom: 6px; }
+  .hero h1 { font-size: 32px; letter-spacing: 3px; font-weight: 700; }
+  .hero .sub { margin-top: 14px; font-size: 15px; opacity: .92; line-height: 1.7; }
   .tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
   .tags span { background: rgba(255,255,255,.16); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
 
-  .photo {
-    border-radius: 24px;
-    overflow: hidden;
-    margin-bottom: 24px;
-    box-shadow: 0 6px 22px rgba(122,75,50,.12);
-    background: #fff;
-  }
-  .photo img { width: 100%; display: block; }
-
+  /* Meta bar */
   .meta {
     display: flex; flex-wrap: wrap;
     background: var(--card);
@@ -67,6 +61,19 @@
   }
   h2 { font-size: 20px; color: var(--primary); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
   .overview p { font-size: 15px; color: #4a4a4a; }
+
+  /* illustration block */
+  .illus {
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f3e6d6, #ead6bf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+  }
+  .illus svg { width: 100%; max-width: 360px; height: auto; }
 
   ul.ingredients { list-style: none; }
   ul.ingredients li {
@@ -117,88 +124,133 @@
 <body>
 <div class="wrap">
 
+  <!-- HERO -->
   <div class="hero">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g>
+        <!-- eggplant body -->
+        <path d="M62 40 C72 48 74 64 64 76 C55 87 38 87 30 76 C22 65 26 50 38 43 C45 39 54 35 62 40 Z" fill="#7c4a86"/>
+        <path d="M58 44 C66 51 67 64 59 73 C53 80 42 80 36 73 C30 65 33 53 42 48 C48 45 53 42 58 44 Z" fill="#8f5a99"/>
+        <!-- highlight -->
+        <path d="M44 52 C40 58 40 66 44 71" stroke="#b285ba" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7"/>
+        <!-- calyx -->
+        <path d="M60 40 C58 33 62 28 67 27 C66 33 70 36 74 35 C71 41 66 43 60 40 Z" fill="#6f8d4a"/>
+        <path d="M60 40 C55 35 54 30 56 26 C60 30 64 31 67 27 C66 34 64 39 60 40 Z" fill="#7fa055"/>
+        <!-- stem -->
+        <path d="M64 30 Q70 22 74 22" stroke="#6f8d4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      </g>
+    </svg>
     <h1>蒜蓉烤茄子</h1>
-    <p class="sub">软糯入味 · 蒜香浓郁</p>
+    <p class="sub">空气炸锅版本<br>外皮微焦，里面软嫩<br>简单，很适合新手</p>
     <div class="tags">
       <span>新手友善 ⭐</span>
       <span>空气炸锅</span>
       <span>30 分钟内</span>
-      <span>微辣下饭</span>
+      <span>健康晚餐</span>
     </div>
   </div>
 
-  <div class="photo">
-    <img src="assets/garlic-eggplant-hero.png" alt="蒜蓉烤茄子 · 空气炸锅成品">
-  </div>
-
+  <!-- META -->
   <div class="meta">
     <div><div class="num">简单</div><div class="lbl">难度</div></div>
-    <div><div class="num">15 分钟</div><div class="lbl">准备</div></div>
-    <div><div class="num">15+8 分</div><div class="lbl">烤制</div></div>
-    <div><div class="num">2 人份</div><div class="lbl">份量</div></div>
+    <div><div class="num">~25 分</div><div class="lbl">总时长</div></div>
+    <div><div class="num">15+6 分</div><div class="lbl">烤制</div></div>
+    <div><div class="num">1-2 人</div><div class="lbl">份量</div></div>
   </div>
 
+  <!-- OVERVIEW -->
   <section class="overview">
     <h2>🍆 关于这道菜</h2>
-    <p>空气炸锅做蒜蓉茄子，<br>先烤软，再铺蒜蓉酱，最后回烤更入味。<br>茄子软糯不油腻。<br>蒜香、酱香和微辣，层次特别丰富。</p>
+    <p>空气炸锅版本的蒜蓉烤茄子。<br>外皮微焦，里面软嫩。<br>做法简单，很适合新手。</p>
   </section>
 
+  <!-- ILLUSTRATION -->
+  <div class="illus">
+    <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" aria-label="蒜蓉烤茄子示意图">
+      <!-- plate -->
+      <ellipse cx="180" cy="150" rx="150" ry="34" fill="#fff" opacity=".55"/>
+      <ellipse cx="180" cy="146" rx="128" ry="26" fill="#fbf7f1"/>
+      <!-- eggplant halves (split, topped) -->
+      <g>
+        <!-- half 1 -->
+        <path d="M70 138 C70 126 96 120 140 120 C184 120 210 126 210 138 C210 148 184 152 140 152 C96 152 70 148 70 138 Z" fill="#6f4078"/>
+        <ellipse cx="140" cy="134" rx="64" ry="11" fill="#caa46a"/>
+        <!-- garlic mince + chili bits -->
+        <circle cx="110" cy="132" r="2.4" fill="#f0e3c4"/>
+        <circle cx="125" cy="135" r="2.4" fill="#f0e3c4"/>
+        <circle cx="142" cy="131" r="2.4" fill="#f0e3c4"/>
+        <circle cx="160" cy="134" r="2.4" fill="#f0e3c4"/>
+        <circle cx="175" cy="132" r="2.4" fill="#f0e3c4"/>
+        <circle cx="133" cy="133" r="1.8" fill="#cc4b3a"/>
+        <circle cx="152" cy="136" r="1.8" fill="#cc4b3a"/>
+        <circle cx="118" cy="129" r="1.6" fill="#6f8d4a"/>
+        <circle cx="167" cy="130" r="1.6" fill="#6f8d4a"/>
+      </g>
+      <!-- steam -->
+      <path d="M120 108 q5 -10 0 -20" stroke="#d9a066" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
+      <path d="M180 108 q-5 -10 0 -20" stroke="#d9a066" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
+    </svg>
+  </div>
+
+  <!-- INGREDIENTS -->
   <section>
-    <h2>🧺 食材清单</h2>
+    <h2>🧺 食材</h2>
     <ul class="ingredients">
-      <li><span>茄子</span><span class="amt">2 根（约 500g）</span></li>
-      <li><span>蒜末</span><span class="amt">25g</span></li>
-      <li><span>小米辣</span><span class="amt">2 根</span></li>
-      <li><span>白芝麻</span><span class="amt">5g</span></li>
-      <li><span>孜然粉</span><span class="amt">3g</span></li>
-      <li><span>辣椒粉</span><span class="amt">3g</span></li>
-      <li><span>生抽</span><span class="amt">10g</span></li>
-      <li><span>蚝油</span><span class="amt">10g</span></li>
-      <li><span>盐</span><span class="amt">2g</span></li>
-      <li><span>食用油</span><span class="amt">10g</span></li>
+      <li><span>茄子</span><span class="amt">1 条</span></li>
+      <li><span>橄榄油</span><span class="amt">适量</span></li>
+      <li><span>蒜头</span><span class="amt">适量</span></li>
+      <li><span>青小米椒</span><span class="amt">适量</span></li>
+      <li><span>生抽</span><span class="amt">3 汤匙</span></li>
+      <li><span>蚝油</span><span class="amt">1 汤匙</span></li>
+      <li><span>盐</span><span class="amt">1 茶匙</span></li>
+      <li><span>糖</span><span class="amt">1 茶匙</span></li>
     </ul>
   </section>
 
+  <!-- STEPS -->
   <section>
     <h2>👨‍🍳 做法</h2>
     <ol class="steps">
-      <li>茄子去头去尾，对半切开。</li>
-      <li>表面刷上一层食用油。</li>
-      <li>放入空气炸锅，180°C 先烤 15 分钟，烤到软。</li>
-      <li>蒜末、小米辣切碎放入碗中。</li>
-      <li>倒入烧热的食用油，激发蒜香。</li>
-      <li>加入生抽、蚝油、盐、孜然粉、辣椒粉，搅拌成蒜蓉酱。</li>
+      <li>茄子去头去尾，切成 3 段。</li>
+      <li>在茄子表面刷上一层橄榄油。</li>
+      <li>放入空气炸锅，200°C 烤 15 分钟。</li>
+      <li>蒜头和青小米椒切碎，放入碗中。</li>
+      <li>倒入热油，激发香味。</li>
+      <li>加入 3 汤匙生抽、1 汤匙蚝油、1 茶匙盐、1 茶匙糖，搅拌均匀。</li>
       <li>把烤好的茄子从中间划开，均匀铺上蒜蓉酱。</li>
-      <li>撒上白芝麻，放回空气炸锅，180°C 再烤 8 分钟即可。</li>
+      <li>放回空气炸锅，180°C 再烤 6 分钟即可享用。</li>
     </ol>
   </section>
 
+  <!-- TIPS -->
   <section>
     <h2>💡 小贴士</h2>
     <ul class="tips">
       <li>先烤软再铺酱，茄子更容易吸味。</li>
       <li>热油浇蒜末，是蒜香浓郁的关键。</li>
-      <li>不吃辣，可以减少小米辣和辣椒粉。</li>
+      <li>不吃辣，可以减少青小米椒。</li>
       <li>各家空气炸锅火力不同，第一次留意上色。</li>
     </ul>
   </section>
 
+  <!-- SUITABLE FOR -->
   <section>
     <h2>🍚 适合</h2>
     <div class="suit">
       <span>下饭菜</span>
       <span>家常晚餐</span>
       <span>新手练手</span>
-      <span>嘴馋微辣</span>
+      <span>健康轻食</span>
     </div>
   </section>
 
+  <!-- CTA -->
   <div class="cta">
     <h3>把这道蒜蓉烤茄子收藏起来吧</h3>
     <p>想吃的那天，照着做就好。</p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <div class="brand">Perry · Cooking Series</div>
     <div>简单的食物，做给在乎的人。</div>
