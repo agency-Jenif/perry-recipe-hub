@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蒜蓉烤茄子 · 空气炸锅食谱</title>
+<meta name="description" content="空气炸锅做蒜蓉茄子，先烤软再铺蒜蓉酱，最后回烤更入味。软糯不油腻，蒜香、酱香、微辣层次丰富。新手友善，2人份。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --primary: #7A4B32;
+    --bg: #F8F5F2;
+    --card: #FFFFFF;
+    --accent: #D9A066;
+    --text: #2E2E2E;
+    --success: #7BAE7F;
+  }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 18px 64px; }
+
+  .hero {
+    margin: 18px 0 24px;
+    background: linear-gradient(165deg, #8a5a3c, #7A4B32);
+    border-radius: 28px;
+    padding: 38px 28px 30px;
+    color: #fff;
+    text-align: center;
+  }
+  .hero h1 { font-size: 34px; letter-spacing: 4px; font-weight: 700; }
+  .hero .sub { margin-top: 12px; font-size: 15px; opacity: .92; }
+  .tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .tags span { background: rgba(255,255,255,.16); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+
+  .photo {
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 22px rgba(122,75,50,.12);
+    background: #fff;
+  }
+  .photo img { width: 100%; display: block; }
+
+  .meta {
+    display: flex; flex-wrap: wrap;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 18px 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 18px rgba(122,75,50,.07);
+  }
+  .meta div { flex: 1 1 25%; text-align: center; padding: 6px 0; }
+  .meta .num { font-size: 16px; font-weight: 700; color: var(--primary); }
+  .meta .lbl { font-size: 12px; color: #999; margin-top: 3px; }
+
+  section {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 26px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(122,75,50,.06);
+  }
+  h2 { font-size: 20px; color: var(--primary); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+  .overview p { font-size: 15px; color: #4a4a4a; }
+
+  ul.ingredients { list-style: none; }
+  ul.ingredients li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0; border-bottom: 1px dashed #ece2d4; font-size: 15px;
+  }
+  ul.ingredients li:last-child { border-bottom: none; }
+  ul.ingredients li .amt { color: var(--accent); font-weight: 600; }
+
+  ol.steps { list-style: none; counter-reset: step; }
+  ol.steps li {
+    counter-increment: step; position: relative;
+    padding: 0 0 22px 46px; font-size: 15px; color: #3a3a3a;
+  }
+  ol.steps li:last-child { padding-bottom: 0; }
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: -2px;
+    width: 32px; height: 32px; background: var(--primary); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  ol.steps li:not(:last-child)::after {
+    content: ""; position: absolute; left: 15px; top: 32px; bottom: 6px;
+    width: 2px; background: #ece2d4;
+  }
+
+  .tips li { list-style: none; padding: 8px 0 8px 26px; position: relative; font-size: 15px; color: #4a4a4a; }
+  .tips li::before { content: "·"; position: absolute; left: 8px; top: 4px; color: var(--accent); font-size: 24px; line-height: 1; }
+
+  .suit { display: flex; flex-wrap: wrap; gap: 10px; }
+  .suit span { background: #f1ede8; color: var(--primary); padding: 8px 16px; border-radius: 16px; font-size: 14px; }
+
+  .cta {
+    background: linear-gradient(135deg, #e9d9c5, #ddc4a8);
+    color: var(--primary);
+    text-align: center;
+    padding: 30px 24px;
+    border-radius: 22px;
+    margin-bottom: 24px;
+  }
+  .cta h3 { font-size: 19px; margin-bottom: 8px; }
+  .cta p { font-size: 14px; opacity: .85; }
+
+  footer { text-align: center; font-size: 12px; color: #b3a89c; line-height: 1.9; }
+  footer .brand { color: var(--primary); font-weight: 600; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>蒜蓉烤茄子</h1>
+    <p class="sub">软糯入味 · 蒜香浓郁</p>
+    <div class="tags">
+      <span>新手友善 ⭐</span>
+      <span>空气炸锅</span>
+      <span>30 分钟内</span>
+      <span>微辣下饭</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <img src="assets/garlic-eggplant-hero.png" alt="蒜蓉烤茄子 · 空气炸锅成品">
+  </div>
+
+  <div class="meta">
+    <div><div class="num">简单</div><div class="lbl">难度</div></div>
+    <div><div class="num">15 分钟</div><div class="lbl">准备</div></div>
+    <div><div class="num">15+8 分</div><div class="lbl">烤制</div></div>
+    <div><div class="num">2 人份</div><div class="lbl">份量</div></div>
+  </div>
+
+  <section class="overview">
+    <h2>🍆 关于这道菜</h2>
+    <p>空气炸锅做蒜蓉茄子，<br>先烤软，再铺蒜蓉酱，最后回烤更入味。<br>茄子软糯不油腻。<br>蒜香、酱香和微辣，层次特别丰富。</p>
+  </section>
+
+  <section>
+    <h2>🧺 食材清单</h2>
+    <ul class="ingredients">
+      <li><span>茄子</span><span class="amt">2 根（约 500g）</span></li>
+      <li><span>蒜末</span><span class="amt">25g</span></li>
+      <li><span>小米辣</span><span class="amt">2 根</span></li>
+      <li><span>白芝麻</span><span class="amt">5g</span></li>
+      <li><span>孜然粉</span><span class="amt">3g</span></li>
+      <li><span>辣椒粉</span><span class="amt">3g</span></li>
+      <li><span>生抽</span><span class="amt">10g</span></li>
+      <li><span>蚝油</span><span class="amt">10g</span></li>
+      <li><span>盐</span><span class="amt">2g</span></li>
+      <li><span>食用油</span><span class="amt">10g</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>👨‍🍳 做法</h2>
+    <ol class="steps">
+      <li>茄子去头去尾，对半切开。</li>
+      <li>表面刷上一层食用油。</li>
+      <li>放入空气炸锅，180°C 先烤 15 分钟，烤到软。</li>
+      <li>蒜末、小米辣切碎放入碗中。</li>
+      <li>倒入烧热的食用油，激发蒜香。</li>
+      <li>加入生抽、蚝油、盐、孜然粉、辣椒粉，搅拌成蒜蓉酱。</li>
+      <li>把烤好的茄子从中间划开，均匀铺上蒜蓉酱。</li>
+      <li>撒上白芝麻，放回空气炸锅，180°C 再烤 8 分钟即可。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>💡 小贴士</h2>
+    <ul class="tips">
+      <li>先烤软再铺酱，茄子更容易吸味。</li>
+      <li>热油浇蒜末，是蒜香浓郁的关键。</li>
+      <li>不吃辣，可以减少小米辣和辣椒粉。</li>
+      <li>各家空气炸锅火力不同，第一次留意上色。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍚 适合</h2>
+    <div class="suit">
+      <span>下饭菜</span>
+      <span>家常晚餐</span>
+      <span>新手练手</span>
+      <span>嘴馋微辣</span>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h3>把这道蒜蓉烤茄子收藏起来吧</h3>
+    <p>想吃的那天，照着做就好。</p>
+  </div>
+
+  <footer>
+    <div class="brand">Perry · Cooking Series</div>
+    <div>简单的食物，做给在乎的人。</div>
+  </footer>
+
+</div>
+</body>
+</html>
