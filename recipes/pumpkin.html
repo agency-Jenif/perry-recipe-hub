@@ -64,18 +64,22 @@
   h2 { font-size: 20px; color: var(--primary); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
   .overview p { font-size: 15px; color: #4a4a4a; }
 
-  /* image illustration block */
-  .illus {
+  /* photo gallery block (replaces the old svg illustration) */
+  .illus-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
     border-radius: 22px;
     overflow: hidden;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #f3e6d6, #ead6bf);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 28px;
   }
-  .illus svg { width: 100%; max-width: 360px; height: auto; }
+  .illus-photos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+  }
 
   ul.ingredients { list-style: none; }
   ul.ingredients li {
@@ -106,6 +110,21 @@
   .tips li::before { content: "·"; position: absolute; left: 8px; top: 4px; color: var(--accent); font-size: 24px; line-height: 1; }
   .suit { display: flex; flex-wrap: wrap; gap: 10px; }
   .suit span { background: #f1ede8; color: var(--primary); padding: 8px 16px; border-radius: 16px; font-size: 14px; }
+
+  /* Makers photo */
+  .makers {
+    text-align: center;
+  }
+  .makers img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 14px;
+    box-shadow: 0 6px 20px rgba(122,75,50,.15);
+  }
+  .makers p { font-size: 14px; color: #4a4a4a; }
+  .makers .names { color: var(--primary); font-weight: 700; margin-top: 4px; }
 
   /* CTA */
   .cta {
@@ -165,34 +184,10 @@
     <p>南瓜本身就有自然的甜。<br>不需要糖，不需要奶油。<br>只用鸡蛋和一点面粉，就能把它变成温柔的小点心。<br>简单，是它最好的地方。</p>
   </section>
 
-  <!-- ILLUSTRATION -->
-  <div class="illus">
-    <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" aria-label="南瓜塔示意图">
-      <!-- plate -->
-      <ellipse cx="180" cy="150" rx="150" ry="34" fill="#fff" opacity=".55"/>
-      <ellipse cx="180" cy="146" rx="128" ry="26" fill="#fbf7f1"/>
-      <!-- tart base -->
-      <ellipse cx="180" cy="132" rx="92" ry="22" fill="#caa06a"/>
-      <path d="M88 132 Q88 150 180 150 Q272 150 272 132 L272 128 Q180 144 88 128 Z" fill="#b88a52"/>
-      <!-- pumpkin filling -->
-      <ellipse cx="180" cy="124" rx="84" ry="18" fill="#ef9d45"/>
-      <ellipse cx="180" cy="120" rx="78" ry="15" fill="#f5ad57"/>
-      <!-- pumpkin cubes -->
-      <rect x="150" y="108" width="16" height="13" rx="3" fill="#e8923f" transform="rotate(-8 158 114)"/>
-      <rect x="178" y="106" width="15" height="13" rx="3" fill="#f2a851" transform="rotate(6 185 112)"/>
-      <rect x="200" y="110" width="14" height="12" rx="3" fill="#e8923f" transform="rotate(-4 207 116)"/>
-      <rect x="164" y="113" width="13" height="11" rx="3" fill="#f7b968" transform="rotate(10 170 118)"/>
-      <!-- sesame -->
-      <ellipse cx="155" cy="116" rx="2" ry="1.1" fill="#3a2a1a"/>
-      <ellipse cx="190" cy="113" rx="2" ry="1.1" fill="#fff"/>
-      <ellipse cx="205" cy="118" rx="2" ry="1.1" fill="#3a2a1a"/>
-      <ellipse cx="172" cy="120" rx="2" ry="1.1" fill="#fff"/>
-      <ellipse cx="218" cy="116" rx="2" ry="1.1" fill="#3a2a1a"/>
-      <ellipse cx="142" cy="120" rx="2" ry="1.1" fill="#fff"/>
-      <!-- steam -->
-      <path d="M150 96 q5 -10 0 -20" stroke="#d9a066" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
-      <path d="M210 96 q-5 -10 0 -20" stroke="#d9a066" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".5"/>
-    </svg>
+  <!-- PHOTOS -->
+  <div class="illus-photos">
+    <img src="images/tarts-tray.png" alt="出炉的南瓜塔">
+    <img src="images/honey-drizzle.png" alt="淋上蜂蜜的南瓜塔">
   </div>
 
   <!-- INGREDIENTS -->
@@ -218,6 +213,7 @@
       <li>把南瓜馅铺在烘焙纸上，整理成想要的形状。</li>
       <li>表面撒上黑 / 白芝麻。</li>
       <li>放入空气炸锅，180°C 烤 20 分钟即可。</li>
+      <li>可加上少许蜜糖，味道会更加丰富！</li>
     </ol>
   </section>
 
@@ -241,6 +237,14 @@
       <span>小朋友点心</span>
       <span>健康嘴馋时</span>
     </div>
+  </section>
+
+  <!-- MAKERS -->
+  <section class="makers">
+    <h2 style="justify-content:center;">🧡 用心制作</h2>
+    <img src="images/perry-jiayi.png" alt="Perry 和 Jiayi 一起完成的南瓜塔">
+    <p>一起动手，一起开吃。</p>
+    <p class="names">Perry &amp; Jiayi</p>
   </section>
 
   <!-- CTA -->
